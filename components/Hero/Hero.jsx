@@ -46,6 +46,7 @@ export default function Hero() {
 
   return (
     <>
+    <a href="/">VOLTAR PARA HOME</a>
       <div className={styles.modal} data-open={openModal}>
         <Modal
           setOpenModal={setOpenModal}
