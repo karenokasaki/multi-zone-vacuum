@@ -15,7 +15,6 @@ const nextConfig = {
     });
     return config;
   },
-  assetPrefix: "/laundry",
 };
 
 module.exports = nextConfig;
