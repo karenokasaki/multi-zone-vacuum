@@ -1,0 +1,73 @@
+@use "variables";
+
+div.cta a.newbtn,
+a[data-ms-action="default-product"],
+a[data-ms-action="default-product-static"],
+a[data-ms-action="personalized-product"] {
+  padding: 12px 18px;
+}
+
+.vacuum-discovery.vacuum-discovery {
+  background-color: variables.$bg-primary;
+  font-family: "LG EI", "Times New Roman", Times, serif, sans-serif !important;
+}
+
+:global(.footer-box) {
+  max-width: 100vw !important;
+}
+
+/* FONTS */
+@font-face {
+  font-family: "LG EI";
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  src: local("☺"),
+    url("/us/discover-vacuums/fonts/LG EI_Text Regular.woff2") format("woff2"),
+    url("/us/discover-vacuums/fonts/LG EI_Text Regular.woff") format("woff"),
+    url("/us/discover-vacuums/fonts/LG EI_Text Regular.eot") format("eot");
+}
+@font-face {
+  font-family: "LG EI";
+  font-display: swap;
+  font-weight: 550;
+  font-style: normal;
+  src: local("☺"),
+    url("/us/discover-vacuums/fonts/LG EI_Headline Semibold.woff2")
+      format("woff2"),
+    url("/us/discover-vacuums/fonts/LG EI_Headline Semibold.woff")
+      format("woff"),
+    url("/us/discover-vacuums/fonts/LG EI_Headline Semibold.eot") format("eot");
+}
+
+@font-face {
+  font-family: "LG EI";
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+  src: local("☺"),
+    url("/us/discover-vacuums/fonts/LG EI_Text SemiBold.woff2") format("woff2"),
+    url("/us/discover-vacuums/fonts/LG EI_Text SemiBold.woff") format("woff"),
+    url("/us/discover-vacuums/fonts/LG EI_Text SemiBold.eot") format("eot");
+}
+
+@font-face {
+  font-family: "LG EI";
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+  src: local("☺"),
+    url("/us/discover-vacuums/fonts/LG EI_Text Bold.woff2") format("woff2"),
+    url("/us/discover-vacuums/fonts/LG EI_Text Bold.woff") format("woff"),
+    url("/us/discover-vacuums/fonts/LG EI_Text Bold.eot") format("eot");
+}
+
+@font-face {
+  font-family: "LG Smart Regular";
+  font-display: swap;
+  font-weight: normal;
+  font-style: italic;
+  src: local("☺"),
+    url("/lg5-common/webfonts/LG_Smart_Regular_Italic.woff2") format("woff2"),
+    url("/lg5-common/webfonts/LG_Smart_Regular_Italic.woff") format("woff");
+}

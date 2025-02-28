@@ -1,0 +1,122 @@
+@use "variables";
+@use "mixin";
+@import "../../styles/LG/variables";
+
+.wrapper {
+  background-color: transparent;
+  margin-top: -65px;
+  position: relative;
+}
+
+.container {
+  background-color: #f0ece4;
+  border-radius: 32px 32px 0px 0px;
+  padding: 62px 14px 62px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 40px;
+    padding: 0 14px;
+
+    .title {
+      color: variables.$text-primary;
+      font-size: 32px;
+      font-weight: 550;
+      line-height: 35.84px;
+      letter-spacing: -0.01em;
+      text-align: left;
+    }
+
+    .text {
+      color: variables.$text-secondary;
+      font-size: 18px;
+      line-height: 133.33%;
+      margin: 0;
+    }
+  }
+
+  .video {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 32px;
+    margin: 0 auto;
+    width: 100%;
+
+    video {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: ($min-sm + px)) {
+  .wrapper {
+    margin-top: 0;
+  }
+
+  .container {
+    background-color: #f0ece4;
+    border-radius: 0px;
+
+    &__inner {
+      align-items: center;
+
+      .title {
+        font-size: 36px;
+        font-weight: 550;
+        line-height: 40.32px;
+        letter-spacing: -0.01em;
+        text-align: center;
+      }
+
+      .text {
+        width: 90%;
+        text-align: center;
+      }
+    }
+
+    .video {
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
+
+@media screen and (min-width: ($min-lg + px)) {
+  .container {
+    padding-bottom: 130px;
+    padding-top: 90px;
+
+    &__inner {
+      align-items: center;
+
+      .title {
+        font-size: 36px;
+        font-weight: 550;
+        line-height: 40.32px;
+        letter-spacing: -0.01em;
+        text-align: center;
+      }
+
+      .text {
+        width: 76%;
+        text-align: center;
+      }
+    }
+
+    .video {
+      aspect-ratio: 16 / 9;
+      max-width: 900px;
+      width: 100%;
+      border-radius: 32px;
+
+      video {
+        width: 100%;
+      }
+    }
+  }
+}

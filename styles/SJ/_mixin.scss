@@ -1,0 +1,7 @@
+@import "../LG/variables";
+
+@mixin container {
+  max-width: 1660px;
+  width: 100%;
+  margin: 0 auto;
+}

@@ -1,0 +1,160 @@
+@use "variables";
+@use "mixin";
+@import "../../styles/LG/variables";
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: -80px auto 0;
+  padding: 80px 0;
+  border-top-left-radius: variables.$border-radius--lg;
+  border-top-right-radius: variables.$border-radius--lg;
+  background-color: variables.$white;
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 36px;
+  padding: 36px 24px;
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.img-wrapper {
+  max-width: 850px;
+  min-width: 350px;
+  width: 100%;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+}
+
+.copy {
+  width: 100%;
+}
+
+.copy-wrapper {
+  max-width: 520px;
+  width: 100%;
+
+  h2 {
+    font-size: 36px;
+    font-weight: 550;
+    line-height: 40.32px;
+    letter-spacing: -0.01em;
+    text-align: left;
+
+    margin-bottom: 16px;
+    color: variables.$text-primary;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    // color: variables.$text-secondary;
+    color: #1b1a1ede;
+  }
+}
+
+p.disclaimer {
+  color: variables.$text-primary;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.64px;
+  text-align: left;
+
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  margin: 0;
+  
+  margin-left: 35px;
+
+}
+
+@media screen and (max-width: ($max-md + px)) {
+  .container {
+    margin-top: 0;
+    border-radius: 0;
+    padding: 95px 0;
+  }
+
+  .wrapper {
+    flex-direction: column-reverse;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .copy-wrapper {
+    text-align: center;
+    max-width: 670px;
+  }
+
+  .img-wrapper {
+    max-width: 500px;
+  }
+
+  p.disclaimer {
+    width: 100%;
+    min-width: 560px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0 !important;
+    border: none;
+  }
+}
+
+@media screen and (max-width: ($max-xs + px)) {
+  .container {
+    padding-top: 26px;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+  }
+
+  .img-wrapper {
+    min-width: unset;
+    position: initial;
+  }
+
+  .copy-wrapper {
+    text-align: left;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 550;
+      line-height: 35.84px;
+      letter-spacing: -0.01em;
+      text-align: left;
+    }
+
+    p {
+      color: variables.$text-secondary;
+    }
+  }
+
+  p.disclaimer {
+    text-align: left;
+    padding: 0 24px;
+    bottom: -50px;
+    color: variables.$text-secondary;
+    min-width: unset;
+      
+  }
+}

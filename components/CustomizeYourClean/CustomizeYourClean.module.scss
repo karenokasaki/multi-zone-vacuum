@@ -1,0 +1,154 @@
+@import "../../styles/LG/variables.scss";
+@import "../../styles/SJ/variables";
+
+$background-color: #f0ece4;
+
+.wrapper {
+  background-color: $background-color;
+  padding: 60px 20px;
+
+  display: flex;
+  justify-content: center;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  overflow: hidden;
+  width: 100%;
+  padding: 58px 0 0 0;
+  border-radius: 32px;
+  background-color: $color-white;
+}
+
+.video-container {
+  overflow: hidden;
+  width: 100%;
+  margin-top: -50px;
+}
+
+.video {
+  width: calc(100% + 2px);
+  margin-left: 2px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 17px;
+
+  :global(.cta) {
+    max-width: 170px;
+
+    a {
+      padding: 10.5px 16px !important;
+    }
+  }
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 8px;
+  color: $text-primary;
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 13.44px;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 550;
+    line-height: 35.84px;
+    letter-spacing: -0.01em;
+    text-align: left;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0em;
+  }
+}
+
+@media screen and (min-width: ($min-md + px)) {
+  /*
+            TABLET
+    */
+
+  .wrapper {
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 100px;
+  }
+
+  .container {
+    flex-direction: row-reverse;
+    justify-content: start;
+    max-width: 1300px;
+    padding: unset;
+    gap: 0;
+    padding-right: 27px;
+  }
+
+  .video-container {
+    min-width: 400px;
+    height: 100%;
+    width: auto;
+    margin: 0;
+  }
+
+  .video {
+    min-height: 365px;
+    object-fit: cover;
+    object-position: -100px;
+    margin: unset;
+    height: calc(100% + 3px);
+  }
+
+  .content {
+    gap: 13px;
+    // max-width: 465px;
+    max-width: 100%;
+    padding: 50px 0 37px 0;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: ($min-lg + px)) {
+  /*
+            DESKTOP
+    */
+  .wrapper {
+    padding-top: 160px;
+  }
+
+  .content {
+    padding: 0;
+    max-width: 540px;
+  }
+
+  .container {
+    max-height: 600px;
+  }
+
+  .video {
+    object-position: -50px;
+  }
+}

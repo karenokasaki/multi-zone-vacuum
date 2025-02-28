@@ -1,0 +1,122 @@
+@import "../../styles/LG/variables.scss";
+@import "../../styles/SJ/variables";
+
+.container {
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-primary;
+  margin: 0 auto;
+}
+
+.hero {
+  max-width: 100%;
+  position: relative;
+  margin-bottom: -12%;
+
+  img {
+    width: 100%;
+    border-radius: 32px 32px 0px 0px;
+  }
+}
+
+.content {
+  position: absolute;
+  max-width: 530px;
+  color: $color-white;
+  top: 27%;
+  left: 9%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  h3 {
+    font-size: 36px;
+    font-weight: 550;
+    line-height: 40.32px;
+    letter-spacing: -0.01em;
+    text-align: left;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+.cta-btn {
+  margin-top: 8px;
+
+  a {
+    padding: 10.5px 16px !important;
+  }
+}
+
+@media screen and (max-width: ($max-md + px)) {
+  //991px
+  .content {
+    max-width: 460px;
+    top: 44px;
+    left: 44px;
+  }
+}
+
+@media screen and (max-width: ($max-sm + px)) {
+  //767px
+
+  .container {
+    margin-bottom: unset;
+  }
+
+  .hero {
+    margin-bottom: unset;
+    img {
+      border-radius: 0px;
+      margin-bottom: -120px;
+    }
+  }
+
+  .content {
+    position: relative;
+    max-width: unset;
+    top: unset;
+    right: unset;
+    left: 0;
+    background-color: $color-white;
+    border-radius: 32px 32px 0 0;
+    padding: 64px 24px 42px 24px;
+
+    h3 {
+      font-size: 32px;
+      font-weight: 550;
+      line-height: 35.84px;
+      letter-spacing: -0.01em;
+      text-align: left;
+      color: $text-primary;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24.84px;
+      text-align: left;
+      color: #1b1a1ede;
+    }
+  }
+
+  .cta-btn {
+    margin: 0;
+    max-width: 120px;
+  }
+}

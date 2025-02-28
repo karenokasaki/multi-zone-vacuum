@@ -1,0 +1,137 @@
+@import "../../styles/LG/variables.scss";
+
+.video {
+  overflow: hidden;
+  width: 100%;
+  margin-top: -30px;
+  video {
+    transform: scale(1.01);
+    width: calc(100% + 7px);
+  }
+}
+.wrapper {
+  width: 100%;
+  background-color: #fff;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 35px 0 85px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 0 30px;
+  max-width: 1170px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 34px;
+}
+
+.disclaimer {
+  max-width: 520px;
+  width: 100%;
+  padding: 0 30px;
+
+  p {
+    font-family: LG EI;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.64px;
+    text-align: left;
+    color: #1b1a1e99;
+  }
+}
+
+.header {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+
+  h2 {
+    color: #1b1a1ede;
+    font-size: 32px;
+    font-weight: 550;
+    line-height: 35.84px;
+    letter-spacing: -0.01em;
+    text-align: left;
+  }
+  p {
+    font: $font-regular;
+    color: #1b1a1ede;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    max-width: 880px;
+  }
+}
+
+@media screen and (min-width: ($max-sm + px)) {
+  /* TABLET */
+
+  .wrapper {
+    padding-top: 100px;
+    border-radius: 0;
+  }
+
+  .container {
+    max-width: 1170px;
+    gap: 39px;
+    padding: 0;
+  }
+
+  .disclaimer {
+    max-width: 1170px;
+  }
+
+  .header {
+    align-items: center;
+    max-width: 560px;
+    h2 {
+      font-size: 36px;
+      font-weight: 550;
+      line-height: 40.32px;
+      letter-spacing: -0.01em;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: ($min-xl + px)) {
+  /* DESKTOP */
+
+  .disclaimer {
+    max-width: calc(100% - 60px);
+    p {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14.64px;
+      text-align: left;
+    }
+  }
+
+  .container {
+    max-width: 1600px;
+    gap: 60px;
+  }
+
+  .video {
+    padding-right: 60px;
+  }
+}

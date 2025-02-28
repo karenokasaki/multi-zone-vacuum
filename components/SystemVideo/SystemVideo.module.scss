@@ -1,0 +1,180 @@
+@use "variables";
+@use "mixin";
+@import "../../styles/LG/variables";
+
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 150px 24px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 32px;
+}
+
+.copy {
+  .disclaimer {
+    color: variables.$text-primary;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 14.64px;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 550;
+    line-height: 40.32px;
+    letter-spacing: -0.01em;
+    text-align: left;
+
+    margin-bottom: 16px;
+    color: variables.$text-primary;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #1b1a1ede;
+  }
+}
+
+.cta {
+  margin-bottom: 28px;
+}
+
+.video {
+  border-radius: 32px;
+  overflow: hidden;
+  max-width: 830px;
+  width: 60%;
+
+  video {
+    object-fit: cover;
+    border-radius: 32px;
+  }
+}
+
+.logos {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  img {
+    height: 100px;
+  }
+}
+
+.copy {
+  max-width: 485px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// .disclaimer-container {
+//   display: none;
+// }
+
+@media screen and (max-width: ($max-md + px)) {
+  // .disclaimer-container {
+  //   display: unset;
+  // }
+  // .show-desktop {
+  //   display: none;
+  // }
+  .wrapper {
+    // padding: 0 24px;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .container {
+    padding: 56px 24px;
+  }
+
+  .copy {
+    text-align: center;
+    max-width: 680px;
+    width: 100%;
+
+    h2 {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 32px;
+    }
+  }
+
+  .logos {
+    margin: 0 auto 32px auto;
+  }
+
+  .video {
+    max-width: 560px;
+    width: 100%;
+  }
+
+  .cta {
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: ($max-xs + px)) {
+  .container {
+    padding: 52px 15px 50px 15px;
+    background-color: white;
+  }
+
+  .copy {
+    text-align: start;
+    padding: 0 10px;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 550;
+      line-height: 35.84px;
+      letter-spacing: -0.01em;
+      text-align: left;
+    }
+
+    p {
+      color: variables.$text-secondary;
+      margin-bottom: 20px;
+    }
+  }
+
+  .cta {
+    display: flex;
+  }
+
+  .logos {
+    margin: 0;
+    margin-bottom: 23px;
+
+    img {
+      height: 75px;
+    }
+  }
+
+  .video {
+    border-radius: variables.$border-radius--md;
+  }
+
+  .disclaimer {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.64px;
+    text-align: left;
+  }
+}
