@@ -15,7 +15,7 @@ const nextConfig = {
     });
     return config;
   },
-  assetPrefix: "https://multi-zone-vacuum.vercel.app/",
+  assetPrefix: "/vacuum/",
 };
 
 module.exports = nextConfig;
