@@ -15,6 +15,7 @@ const nextConfig = {
     });
     return config;
   },
+  assetPrefix: "/vacuum/",
 };
 
 module.exports = nextConfig;
